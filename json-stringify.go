@@ -154,7 +154,7 @@ func parseParams(rawTag string) map[string]string {
 }
 
 // GetTagDetails implements types.TagEditorCapable.
-func (p *JSONStringify) GetTagDetails(rawTag, context string) (*types.TagDetailsResponse, error) {
+func (p *JSONStringify) GetTagDetails(rawTag, context, workspace string) (*types.TagDetailsResponse, error) {
 	params := parseParams(rawTag)
 	indent := params["indent"]
 	if indent == "" {

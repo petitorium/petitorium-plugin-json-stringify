@@ -271,7 +271,7 @@ func TestExecuteHook_PreservesOtherKeys(t *testing.T) {
 
 func TestGetTagDetails(t *testing.T) {
 	p := &JSONStringify{}
-	res, err := p.GetTagDetails(`{{json-stringify:wrap}}`, "body")
+	res, err := p.GetTagDetails(`{{json-stringify:wrap}}`, "body", "")
 	if err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
